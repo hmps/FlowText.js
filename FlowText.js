@@ -40,8 +40,28 @@ Object.prototype.FlowText = function(opts) {
 		}
 	}
 
+	$el.debug = function() {
+		var t;
+
+		// If a single element is passed in this.length will be undefined
+		if( undefined === this.length ) {
+			t = this.innerText;
+			this.innerHTML = t.substring(0,45) + '<span style="color:red;">' + t.substring(45,75) + '</span>' + t.substring(75,t.length);
+
+		// If a group of elements are passed in this.length will tell us how many
+		} else {
+			for ( var i=0 ; i < this.length; i++ ) {
+				t = this[i].innerText;
+				this[i].innerHTML = t.substring(0,45) + '<span style="color:red;">' + t.substring(45,75) + '</span>' + t.substring(75,t.length);
+			}
+		}
+
+	}
+
 	// Call reflow to setup the initial text size
 	$el.reflow( $el.offsetWidth );
+	if( true === options.debug ) { $el.debug(); }
+
 
 	// Attach an event listener to listen for window.resize
 	window.addEventListener('resize', function() {
