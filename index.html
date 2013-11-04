@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FlowText.js</title>
+	<style>
+		p {
+			width: 90%;
+			padding: 0 30px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<h1>Flow by ID</h1>
+	<p id="text-id">This text will reflow nicely since it's targetet by getElementById('text-id') in the source code. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, aut.</p>
+	<h1>Flow by class</h1>
+	<p class="text-class">This text will also reflow since it's targeted by getElementByClassName('text-class') in the source code. Unfortunatley that selector is not supported in IE8 and below. But who cares really? Just set up sensible defaults and you'll be alright!</p>
+	<h1>Flow by tag</h1>
+	<ul>
+		<li>All these list items will reflow without a hickup.</li>
+		<li>They are targeted by getElementsByTagName('li') in the source code.</li>
+	</ul>
+	<script src="FlowText.js"></script>
+	<script>
+		document.getElementById('text-id').FlowText({minFont: 16});
+		document.getElementsByClassName('text-class').FlowText({minFont: 16});
+		document.getElementsByTagName('li').FlowText({minFont: 16});
+	</script>
+</body>
+</html>
