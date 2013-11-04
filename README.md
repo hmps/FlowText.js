@@ -1,4 +1,5 @@
 # FlowText.js
+*Current version: 0.1.1*
 
 FlowText.js is a small JS-module to make text flow with the changes of the viewport. Unminified it's less than 60 lines of JS and it has no dependecies. Since it makes use of addEventListener it won't work in anything less than IE9 but if you setup sensible defaults for you text it really shouldn't be too much of an issue. Progressive enhancements , yoaw.
 
