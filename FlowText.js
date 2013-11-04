@@ -1,5 +1,5 @@
 /*!
-* FlowText.js 0.5
+* FlowText.js 0.1.0
 *
 * Copyright 2013, Hampus Persson http://hmps.se
 * Released under the WTFPL license
