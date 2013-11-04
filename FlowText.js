@@ -17,8 +17,6 @@ Object.prototype.FlowText = function(opts) {
 
 	// Setup the options
 	var options = {
-		maxWidth		: opts.maxWidth		|| false, // For future use
-		minWidth		: opts.minWidth 	|| false, // For future use
 		maxFont			: opts.maxFont 		|| 36,
 		minFont			: opts.minFont 		|| 16,
 		compressor		: opts.compressor 	|| 20,
