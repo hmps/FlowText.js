@@ -20,7 +20,7 @@ Object.prototype.FlowText = function(opts) {
 		maxWidth		: opts.maxWidth		|| false, // For future use
 		minWidth		: opts.minWidth 	|| false, // For future use
 		maxFont			: opts.maxFont 		|| 36,
-		minFont			: opts.minFont 		|| 12,
+		minFont			: opts.minFont 		|| 16,
 		compressor		: opts.compressor 	|| 20,
 		debug			: opts.debug 		|| false // For future use
 	};
