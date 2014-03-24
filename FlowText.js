@@ -10,17 +10,17 @@
 
 Object.prototype.FlowText = function(opts) {
 	// If opts isn't passed in an empty object is setup.
-	if( 'object' !== typeof opts) { var opts = {}; }
+	if( 'object' !== typeof opts) { opts = {}; }
 
 	var $el = this,
 		value;
 
 	// Setup the options
 	var options = {
-		maxFont			: opts.maxFont 		|| 36,
-		minFont			: opts.minFont 		|| 16,
-		compressor		: opts.compressor 	|| 20,
-		debug			: opts.debug 		|| false // For future use
+		maxFont			: opts.maxFont		|| 36,
+		minFont			: opts.minFont		|| 16,
+		compressor		: opts.compressor	|| 20,
+		debug			: opts.debug		|| false // For future use
 	};
 
 	// The reflow function provides the main functionality
@@ -38,7 +38,7 @@ Object.prototype.FlowText = function(opts) {
 				this[i].style.fontSize = fz+'px';
 			}
 		}
-	}
+	};
 
 	$el.debug = function() {
 		var t;
@@ -56,7 +56,7 @@ Object.prototype.FlowText = function(opts) {
 			}
 		}
 
-	}
+	};
 
 	// Call reflow to setup the initial text size
 	$el.reflow( $el.offsetWidth );
